@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DialogResourceDefinition id="IDD_DIALOG_OVERLAY_GROUP" x="0" y="0" w="400" h="200" isEx="True" isDiscardable="False">
+  <Caption>Rediger gruppe</Caption>
+  <Style>DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU   </Style>
+  <ExStyle />
+  <Font size="9" weight="0" italic="0" charset="0x0">MS Sans Serif</Font>
+  <Controls>
+    <Control type="LTEXT" id="IDC_BAND_GROUP_TEXT" x="10" y="7" w="60" h="12" isTextQuoted="True">
+      <Text>Gruppe&amp;navn:</Text>
+      <Style />
+      <ExStyle />
+      <Class />
+    </Control>
+    <Control type="EDITTEXT" id="IDC_BAND_GROUP" x="69" y="7" w="95" h="12" isTextQuoted="True">
+      <Text />
+      <Style>ES_AUTOHSCROLL</Style>
+      <ExStyle />
+      <Class />
+    </Control>
+    <Control type="LTEXT" id="IDC_BAND_GROUP_ACTIVE_TEXT" x="10" y="25" w="100" h="11" isTextQuoted="True">
+      <Text>Innlagte s&amp;kjema:</Text>
+      <Style />
+      <ExStyle />
+      <Class />
+    </Control>
+    <Control type="CONTROL" id="IDC_BAND_GROUP_ACTIVE_LIST" x="10" y="40" w="165" h="130" isTextQuoted="True">
+      <Text>list1</Text>
+      <Style>LVS_REPORT | WS_BORDER | WS_TABSTOP</Style>
+      <ExStyle />
+      <Class>SysListView32</Class>
+    </Control>
+    <Control type="PUSHBUTTON" id="IDC_BAND_GROUP_ADD_BUTTON" x="178" y="72" w="50" h="14" isTextQuoted="True">
+      <Text>&lt;--&amp;Tilføy</Text>
+      <Style />
+      <ExStyle />
+      <Class />
+    </Control>
+    <Control type="PUSHBUTTON" id="IDC_BAND_GROUP_DEL_BUTTON" x="178" y="100" w="50" h="14" isTextQuoted="True">
+      <Text>S&amp;lette--&gt;</Text>
+      <Style />
+      <ExStyle />
+      <Class />
+    </Control>
+    <Control type="LTEXT" id="IDC_BAND_GROUP_DEFINE_TEXT" x="230" y="20" w="100" h="11" isTextQuoted="True">
+      <Text>Tilgj&amp;engelige skjemaer:</Text>
+      <Style />
+      <ExStyle />
+      <Class />
+    </Control>
+    <Control type="CONTROL" id="IDC_BAND_GROUP_DEFINE_LIST" x="230" y="40" w="165" h="130" isTextQuoted="True">
+      <Text>list2</Text>
+      <Style>LVS_REPORT | WS_BORDER | WS_TABSTOP</Style>
+      <ExStyle />
+      <Class>SysListView32</Class>
+    </Control>
+    <Control type="LTEXT" id="IDC_BAND_GROUP_EXPLANATION" x="10" y="180" w="175" h="11" isTextQuoted="True">
+      <Text>Maks 4 skjemaer kan legges til en gruppe</Text>
+      <Style />
+      <ExStyle />
+      <Class />
+    </Control>
+    <Control type="DEFPUSHBUTTON" id="IDOK" x="190" y="180" w="60" h="14" isTextQuoted="True">
+      <Text>OK</Text>
+      <Style />
+      <ExStyle />
+      <Class />
+    </Control>
+    <Control type="PUSHBUTTON" id="IDCANCEL" x="260" y="180" w="60" h="14" isTextQuoted="True">
+      <Text>Avbryt</Text>
+      <Style />
+      <ExStyle />
+      <Class />
+    </Control>
+    <Control type="PUSHBUTTON" id="IDC_DEVMODEHELP" x="330" y="180" w="60" h="14" isTextQuoted="True">
+      <Text>H&amp;jelp</Text>
+      <Style />
+      <ExStyle />
+      <Class />
+    </Control>
+  </Controls>
+</DialogResourceDefinition>

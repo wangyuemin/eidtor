@@ -1,0 +1,1080 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+#include "rc_str.h"
+#include "rc_dlg.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// ﾆｭｰﾄﾗﾙ (標準) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,5,5,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "Comments", "UI Plug-in\0"
+            VALUE "CompanyName", "Oki Data Corporation\0"
+            VALUE "FileDescription", "UI Plug-in DLL\0"
+            VALUE "FileVersion", "2, 5, 5, 0\0"
+            VALUE "LegalCopyright", "Copyright 2016 Oki Data Corporation\0"
+            VALUE "ProductVersion", "1, 0, 0, 0\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // ﾆｭｰﾄﾗﾙ (標準) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ALLERT_STAPLE DIALOG DISCARDABLE  0, 0, 275, 177
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "警告"
+FONT 9, "MS UI Gothic"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,200,157,50,14
+    LTEXT           "部単位でホチキス止めする場合には、プリンタードライバーの「印刷オプション」タブの「部単位で印刷」に設定してください。アプリケーションの部単位印刷の機能では、部単位でホチキス止めされないことがあります。",
+                    IDC_ALLERT1_TXT,32,11,219,30
+    ICON            "",IDC_ALLERT_ICO,8,14,20,20
+    LTEXT           "・用紙の厚さによってホチキス止め可能枚数が変わります。\r\n\r\n・ホチキス止め可能枚数を超えた場合には、ホチキス止めされずに用紙排出されます。\r\n\r\n・制限を越える枚数のホチキス止めの指定は紙づまりの一因となることがあります。",
+                    IDC_ALLERT2_TXT,32,46,230,47
+    LTEXT           "可能枚数－ホチキス\n・A4/Letter/Exective/B5：\t45枚（最大　厚紙128g/㎡2枚＋80g/㎡43枚）\n・A3/B4/Legal：\t\t\t22枚（最大　厚紙128g/㎡2枚＋80g/㎡20枚）\n\n可能枚数－中綴じ\t\t2～7枚/束（最大　厚紙128g/㎡1枚＋80g/㎡6枚）",
+                    IDC_ALLERT3_TXT,32,100,239,47
+    CONTROL         "次回もこのメッセージを表示する(&S)",IDC_NOSHOW_CH,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,35,159,146,10
+    LTEXT           "注意）",IDC_ALLERT4_TXT,7,46,18,8
+END
+
+IDD_ALLERT_JOBTYPE DIALOG DISCARDABLE  0, 0, 231, 131
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "警告"
+FONT 9, "MS UI Gothic"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,90,108,50,14
+    LTEXT           "  複数ユーザーがログインしている（ユーザーの簡易切り替え機能を利用している）環境では、最初にログインしたユーザー以外はこの機能を使用しないでください。\r\n\r\n  最初にログインしたユーザー以外がこの設定を「オン」にして印刷すると、最初にログインしたユーザーの画面上にジョブ名入力画面が表示され、ジョブ名が入力されるまでの間アプリケーションが停止した状態となってしまいます。",
+                    IDC_ALLERT1_TXT,36,10,174,70
+    ICON            "",IDC_ALLERT_ICO,8,14,20,21
+    CONTROL         "次回もこのメッセージを表示する(&S)",IDC_NOSHOW_CH,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,36,90,146,10
+END
+
+IDD_ALLERT_SADDLE DIALOG DISCARDABLE  0, 0, 231, 101
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "警告"
+FONT 9, "MS UI Gothic"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,90,73,50,14
+    LTEXT           "この指定は、ページがすでに中綴じ（製本）用に並び替えられている必要があります。\r\n中綴じ（製本）用に並び替えを行っていない書類の場合には「レイアウトタブ-シートごとのページ」で小冊子を選択してください。",
+                    IDC_ALLERT1_TXT,36,10,174,39
+    ICON            "",IDC_ALLERT_ICO,8,14,20,21
+    CONTROL         "次回もこのメッセージを表示する(&S)",IDC_NOSHOW_CH,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,36,55,146,10
+END
+
+IDD_ALLERT_SADDLE_NT DIALOG DISCARDABLE  0, 0, 231, 101
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "警告"
+FONT 9, "MS UI Gothic"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,90,73,50,14
+    LTEXT           "この指定は、ページがすでに中綴じ（製本）用に並び替えられている必要があります。",
+                    IDC_ALLERT1_TXT,36,10,174,39
+    ICON            "",IDC_ALLERT_ICO,8,14,20,21
+    CONTROL         "次回もこのメッセージを表示する(&S)",IDC_NOSHOW_CH,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,36,55,146,10
+END
+
+IDD_OVERLAY DIALOG DISCARDABLE  0, 0, 287, 247
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_CONTEXTHELP
+CAPTION "オーバーレイ"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    COMBOBOX        IDC_OVERLAY_CB,15,7,117,51,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "印刷するオーバーレイ(&V):",IDC_ACTOLG_TXT,15,27,103,8
+    LTEXT           "",IDC_MAX_ACTOLG_TXT,192,27,48,8
+    CONTROL         "List1",IDC_ACTOLG_LV,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,15,37,225,58
+    LTEXT           "定義済みオーバーレイ(&F):",IDC_DEFOLG_TXT,15,122,103,8
+    LTEXT           "",IDC_MAX_DEFOLG_TXT,192,122,48,8
+    CONTROL         "List1",IDC_DEFOLG_LV,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,15,132,225,69
+    PUSHBUTTON      "追加(&A)",IDC_ADD_ACTOLG_BT,15,100,50,14
+    PUSHBUTTON      "削除(&L)",IDC_DEL_ACTOLG_BT,75,100,50,14
+    PUSHBUTTON      "新規(&N)...",IDC_ADD_DEFOLG_BT,15,206,50,14
+    PUSHBUTTON      "編集(&E)...",IDC_EDT_DEFOLG_BT,75,206,50,14
+    PUSHBUTTON      "削除(&D)",IDC_DEL_DEFOLG_BT,135,206,50,14
+    PUSHBUTTON      "OK",IDOK,135,225,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,195,225,50,14
+END
+
+IDD_OPT_EDTFORM DIALOG DISCARDABLE  0, 0, 231, 258
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU | DS_CONTEXTHELP
+CAPTION "オーバーレイの定義"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    RTEXT           "オーバーレイ名(&N):",IDC_OVERLAYNAME_TXT,11,12,62,8
+    EDITTEXT        IDC_OVERLAYNAME_EB,76,10,135,12,ES_AUTOHSCROLL
+    RTEXT           "印刷するページ(&P):",IDC_OVERLAYPAGE_TXT,11,34,62,8
+    COMBOBOX        IDC_OVERLAYPAGE_CB,76,32,135,73,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "ページを指定(&C):",IDC_OVERLAYCUST_TXT,19,56,54,8
+    EDITTEXT        IDC_OVERLAYCUST_EB,76,54,135,12,ES_AUTOHSCROLL
+    LTEXT           "ページ番号を区切って入力するか、ページ範囲を指定してください。\n例：1,3,5-12",
+                    IDC_CUSTMPAGE_TXT,11,76,207,16
+    GROUPBOX        "登録フォームのグループ化",IDC_FORMEDT_GR,17,101,194,125
+    RTEXT           "フォーム名(&M):",IDC_FORMNAME_TXT,24,115,69,8
+    COMBOBOX        IDC_FORMNAME_CB,97,113,104,52,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "追加(&A)",IDC_FORMADD_BT,97,135,50,14
+    PUSHBUTTON      "名称変更(&R)",IDC_FORMCHG_BT,151,135,50,14
+    LTEXT           "フォーム(&O):",IDC_FORMLIST_TXT,23,153,178,8
+    LISTBOX         IDC_FORMLIST_LB,22,168,178,27,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "削除(&D)",IDC_FORMDEL_BT,151,203,50,14
+    DEFPUSHBUTTON   "OK",IDOK,97,235,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,151,235,50,14
+END
+
+PUSHBUTTON_DLG DIALOG DISCARDABLE  0, 0, 187, 93
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ダミー"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,32,72,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,104,72,50,14
+END
+
+IDD_OPT_ICCSETTING DIALOG DISCARDABLE  0, 0, 230, 225
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "ICCプロファイルの設定"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "ICCプロファイルの選択",IDC_ICCSETTING_GR,5,5,220,82
+    LTEXT           "入力プロファイル(&I):",IDC_INPUTICC_TXT,13,18,104,14,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_INPUTICC_CB,13,32,149,73,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "参照(&B)",IDC_INPUTICC_BT,171,32,46,14
+    LTEXT           "出力プロファイル(&O):",IDC_OUTPUTICC_TXT,13,47,104,14,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_OUTPUTICC_CB,13,63,149,75,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "参照(&W)",IDC_OUTPUTICC_BT,171,63,46,14
+    GROUPBOX        "レンダリング方式(&R)",IDC_INTENT_GR,5,91,111,80
+    CONTROL         "コントラスト重視",IDC_INTENT_PERSEP_RB,"Button",
+                    BS_AUTORADIOBUTTON,19,106,62,10
+    CONTROL         "鮮やかさ重視",IDC_INTENT_VIVID_RB,"Button",
+                    BS_AUTORADIOBUTTON,19,122,55,10
+    CONTROL         "カラーメトリック",IDC_INTENT_COLMET_RB,"Button",
+                    BS_AUTORADIOBUTTON,19,138,60,10
+    CONTROL         "絶対色彩",IDC_INTENT_ABSMET_RB,"Button",
+                    BS_AUTORADIOBUTTON,18,154,43,10
+    GROUPBOX        "コメント(&C)",IDC_COMMENT_GR,121,91,104,80
+    EDITTEXT        IDC_COMMENT_EB,127,106,91,58,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_WANTRETURN
+    RTEXT           "設定名(&N):",IDC_MAKEDATA_TXT,32,184,85,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_MAKEDATA_EB,127,183,91,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,52,205,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,127,205,50,14
+END
+
+IDD_OPT_COLORSETTING DIALOG DISCARDABLE  0, 0, 170, 121
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_CONTEXTHELP
+CAPTION "その他"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "その他",IDC_HTTYPE_GR,5,7,158,85,WS_GROUP
+    CONTROL         "プリンターのハーフトーンを使用する(&U)",IDC_HTUSEPRT_CH,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_GROUP | 
+                    WS_TABSTOP,15,20,133,16
+    CONTROL         "ブラックオーバープリント(&O)",IDC_BLKOVERPRT_CH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,39,97,10
+    CONTROL         "モノクロ画像の最適化(&B)",IDC_SCREENOBO_CH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,56,111,10
+    LTEXT           "色分解(&S):",IDC_COLORSEP_TXT,13,74,35,12,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_COLORSEP_CB,61,74,89,91,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,5,102,46,14,WS_GROUP
+    PUSHBUTTON      "キャンセル",IDCANCEL,61,102,46,14
+    PUSHBUTTON      "標準(&D)",IDC_DEFAULT_BT,117,102,46,14
+END
+
+IDD_TAB_JOBOPTIONS DIALOG DISCARDABLE  0, 0, 291, 293
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "印刷オプション"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "印刷品位(&Q)",IDC_QUALITY_GR_1200,10,5,130,184
+    CONTROL         "",IDC_QUALITY_IMG_1200,"Button",BS_OWNERDRAW | WS_DISABLED,
+                    21,15,105,80
+    CONTROL         "きれい(1200x1200dpi)",IDC_RESOL_GRA_RB_1200,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,17,100,75,10
+    CONTROL         "ふつう(600x600dpi)",IDC_RESOL_NOR_RB_1200,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,17,117,78,10
+    GROUPBOX        "印刷品位(&Q)",IDC_QUALITY_GR,10,5,130,184
+    CONTROL         "高精細(多階調)",IDC_RESOL_GRA_RB,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,17,97,75,10
+    CONTROL         "きれい(600x1200dpi)",IDC_RESOL_FINE_RB,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,17,109,78,10
+    CONTROL         "ふつう(600x600dpi)",IDC_RESOL_NOR_RB,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,17,121,71,10
+    CONTROL         "イメージスムージングﾞ(&I)",IDC_ISMOOTH_CH,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,17,136,100,10
+    CONTROL         "",IDC_QUALITY_IMG,"Button",BS_OWNERDRAW | WS_DISABLED,21,15,105,80
+	LTEXT           "トラッピング(&T)",IDC_TRAPPING_TXT,16,156,43,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_TRAPPING_CB,64,154,70,51,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "印刷形式(&J)",IDC_JOBTYPE_GR,144,5,137,120
+    CONTROL         "通常印刷",IDC_NORMALJOBPRINT_RB,"Button",BS_AUTORADIOBUTTON | 
+					WS_GROUP | WS_TABSTOP,150,18,43,10
+    CONTROL         "共有ジョブとして保存",IDC_STORETOSHARED_RB,"Button",BS_AUTORADIOBUTTON 
+					WS_TABSTOP,150,29,96,11
+    CONTROL         "プライベートジョブ印刷",IDC_PRIVATEPRINT_RB,"Button",BS_AUTORADIOBUTTON |
+					WS_TABSTOP,150,41,96,10
+    PUSHBUTTON      "印刷形式オプション(&N)...",IDC_JOBTYPEOPTION_BT,186,52,81,14,WS_GROUP
+
+    LTEXT           "部数(&C):",IDC_COPIES_TXT,150,73,25,8
+    EDITTEXT        IDC_COPIES_EB,178,70,30,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_COPIES_SPN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,197,70,7,14
+    CONTROL         "部単位で印刷(&L)",IDC_COLLATE_CH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,151,85,62,8
+	/*CONTROL         "縦横排出(&R)",IDC_ROTATESORT_CH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,151,96,62,8*/
+    LTEXT           "拡大･縮小(&E):",IDC_SCALE_TXT,150,110,40,8
+    EDITTEXT        IDC_SCALE_EB,193,107,35,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SCALE_SPN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,224,107,9,14
+    LTEXT           "aaa",IDC_SCALERNG_TXT,240,108,37,13,SS_CENTERIMAGE
+	
+	GROUPBOX        "印刷形式(&J)",IDC_JOBTYPE_GR_NOHDD,144,5,137,102
+    LTEXT           "部数(&C):",IDC_COPIES_TXT_NOHDD,150,31,30,8
+    EDITTEXT        IDC_COPIES_EB_NOHDD,178,29,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_COPIES_SPN_NOHDD,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,200,28,7,14
+    CONTROL         "部単位で印刷(&L)",IDC_COLLATE_CH_NOHDD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,210,31,60,8
+    LTEXT           "拡大･縮小(&E):",IDC_SCALE_TXT_NOHDD,150,73,40,9
+    EDITTEXT        IDC_SCALE_EB_NOHDD,195,69,31,15,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SCALE_SPN_NOHDD,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,230,69,11,15
+    LTEXT           "aaa",IDC_SCALERNG_TXT_NOHDD,232,69,43,15,SS_CENTERIMAGE
+	GROUPBOX        "用紙サイズ変換",IDC_FITTO_GR,144,130,137,59
+    CONTROL         "用紙サイズを変換する(&Z）",IDC_FITTO_CH,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,151,143,100,10
+    LTEXT           "aaa",IDC_PAPERSIZE_TXT,165,157,102,10,SS_CENTERIMAGE
+    CONTROL         "",IDC_FITTO_BMP_BT,"Button",BS_OWNERDRAW | WS_DISABLED,149,153,10,27
+    COMBOBOX        IDC_FITTO_CB,165,170,102,95,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "ウォーターマーク(&W)...",IDC_WATERMARK_BT,63,252,70,14
+    PUSHBUTTON      "オーバーレイ(&Y)...",IDC_OVERLAY_BT,136,252,70,14,WS_GROUP
+    PUSHBUTTON      "その他(&V)...",IDC_ADVANCED_BT,210,252,70,14
+	PUSHBUTTON      "ユーザー認証(&U)...",IDC_USERAUTH_BT,63,274,70,14
+    PUSHBUTTON      "バージョン情報(&B)...",IDC_VERSION_BT,136,274,70,14
+    PUSHBUTTON      "標準(&D)",IDC_DEFAULT_BT,210,274,70,14
+    CONTROL         "",IDC_OKILOGO_BMP_BT,"Button",BS_OWNERDRAW | 
+                    WS_DISABLED,10,258,50,40
+END
+
+IDD_OPT_JOBTYPE DIALOG DISCARDABLE  0, 0, 167, 163
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU | DS_CONTEXTHELP
+CAPTION "認証設定"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "ジョブ名の設定",IDC_JOBNAMESET_GR,11,7,145,71,WS_GROUP
+    LTEXT           "ジョブ名(&N):",IDC_JOBNAME_TXT,19,23,41,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_JOBNAME_EB,19,37,117,12,ES_AUTOHSCROLL
+    CONTROL         "印刷時にジョブ名を入力する",IDC_JOBNAME_CH,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,19,57,99,10
+    LTEXT           "ジョブ パスワード(&P):",IDC_PASSW_TXT,17,91,61,13,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_PASSW_EB,19,105,31,13,ES_AUTOHSCROLL
+    LTEXT           "4桁の数字を入力します。",IDC_PWEXPLAIN_TXT,74,109,76,13
+    PUSHBUTTON      "OK",IDOK,32,141,48,14,WS_GROUP
+    PUSHBUTTON      "キャンセル",IDCANCEL,85,141,48,14
+END
+
+IDD_OPT_ADVANCE DIALOG DISCARDABLE  0, 0, 165, 167
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "その他"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "印刷効果(&S)",IDC_ADVANCE_GR,7,7,138,44,WS_GROUP
+    ICON            "",IDC_ADVANCE_ICN,16,23,20,21
+    CONTROL         "ミラー反転(&A)",IDC_PRINTMIRROR_CH,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,49,29,88,10
+    CONTROL         "ホストの開放を優先する(&J)",IDC_JOBSPOOL_CH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,61,124,10
+    CONTROL         "極細線を補正する(&H)",IDC_HAIRLINE_CH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,75,124,10
+    CONTROL         "印刷前にドラムクリーニングを実行する(&R)",IDC_OLIGOMER_CH,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,89,140,10
+    GROUPBOX        "印刷データの圧縮(&C)",IDC_COMPRESS_GR,7,104,138,35
+    COMBOBOX        IDC_COMPRESS_CB,16,117,118,62,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,7,148,43,12
+    PUSHBUTTON      "キャンセル",IDCANCEL,54,148,43,12
+    PUSHBUTTON      "標準(&D)",IDC_DEFAULT_BT,101,148,43,12
+END
+
+IDD_WATERMARK_SET DIALOGEX 0, 0, 255, 235
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "ウォーターマークの編集"
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "文字列(&T)",IDC_WTMK_GR,5,5,130,122,WS_GROUP
+    EDITTEXT        IDC_WTMK_TXT_EB,10,18,115,14,ES_AUTOHSCROLL
+    LTEXT           "サイズ(&S):",IDC_WTMK_SZ_TXT,9,36,40,9,NOT WS_GROUP
+    EDITTEXT        IDC_WTMK_SZ_EB,10,48,20,12,ES_AUTOHSCROLL
+    SCROLLBAR       IDC_WTMK_SZ_SLD,35,50,85,10,WS_TABSTOP
+    LTEXT           "回転角度(&G):",IDC_WTMK_ROT_TXT,10,66,40,9,NOT WS_GROUP
+    EDITTEXT        IDC_WTMK_ROT_EB,10,76,20,12,ES_AUTOHSCROLL
+    SCROLLBAR       IDC_WTMK_ROT_SLD,35,78,85,10,WS_TABSTOP
+    LTEXT           "-180",IDC_WTMK_ROT_FRONT,35,90,20,10,NOT WS_GROUP
+    RTEXT           "+180",IDC_WTMK_ROT_REAR,95,90,20,10,NOT WS_GROUP
+    LTEXT           "0",IDC_WTMK_ROT_CENTER,74,90,10,10,NOT WS_GROUP
+    PUSHBUTTON      "フォント(&F)...",IDC_WTMK_FONT_BT,17,105,50,14,WS_GROUP
+    PUSHBUTTON      "色(&C)...",IDC_WTMK_COLOR_BT,73,105,50,14
+    GROUPBOX        "囲み枠(&R)",IDC_WTMK_TRIM_GR,5,135,129,68,WS_GROUP
+    CONTROL         "なし",IDC_WTMK_TRIM_NONE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,15,151,36,10
+    CONTROL         "丸",IDC_WTMK_TRIM_CIRCLE,"Button",BS_AUTORADIOBUTTON,15,
+                    163,36,10
+    CONTROL         "四角",IDC_WTMK_TRIM_SINGLE,"Button",BS_AUTORADIOBUTTON,
+                    15,175,48,10
+    CONTROL         "四角(二重線)",IDC_WTMK_TRIM_DOUBLE,"Button",
+                    BS_AUTORADIOBUTTON,15,187,58,10
+    GROUPBOX        "印刷位置(&P)",IDC_WTMK_LOC_GR,142,135,105,68,WS_GROUP
+    COMBOBOX        IDC_WTMK_LOC_POS,151,148,89,95,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "微調整",IDC_WTMK_LOC_TITLE,146,165,81,9,NOT WS_GROUP
+    RTEXT           "&X:",IDC_WTMK_LOCX_TXT,144,181,8,10,NOT WS_GROUP
+    EDITTEXT        IDC_WTMK_LOCX_EB,154,179,35,12,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_WTMK_LOCX_SPN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,187,179,9,13
+    RTEXT           "&Y:",IDC_WTMK_LOCY_TXT,193,181,8,10,NOT WS_GROUP
+    EDITTEXT        IDC_WTMK_LOCY_EB,203,179,35,12,ES_AUTOHSCROLL
+    CONTROL         "Spin2",IDC_WTMK_LOCY_SPN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,237,179,9,13
+    CONTROL         "",IDC_WTMK_PREVIEW,"Button",BS_OWNERDRAW | WS_DISABLED,
+                    142,9,105,118,WS_EX_STATICEDGE
+    PUSHBUTTON      "OK",IDOK,121,213,60,14,WS_GROUP
+    PUSHBUTTON      "キャンセル",IDCANCEL,186,213,60,14
+END
+
+IDD_WATERMARK_FONT DIALOG DISCARDABLE  0, 0, 255, 130
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "フォント"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    LTEXT           "フォント名(&F):",IDC_WTMK_FONT_NAME_TXT,3,11,40,9,NOT 
+                    WS_GROUP
+    EDITTEXT        IDC_WTMK_FONT_NAME_EB,3,24,108,12,ES_AUTOHSCROLL
+    LISTBOX         IDC_WTMK_FONT_NAME,3,37,109,51,LBS_HASSTRINGS | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL
+    LTEXT           "スタイル(&Y):",IDC_WTMK_FONT_STYLE_TXT,119,11,40,9,NOT 
+                    WS_GROUP
+    EDITTEXT        IDC_WTMK_FONT_STYLE_EB,119,24,63,12,ES_AUTOHSCROLL
+    LISTBOX         IDC_WTMK_FONT_STYLE,119,37,64,51,LBS_HASSTRINGS | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL
+    LTEXT           "サイズ(&S):",IDC_WTMK_FONT_SIZE_TXT,191,11,40,9,NOT 
+                    WS_GROUP
+    EDITTEXT        IDC_WTMK_FONT_SIZE_EB,191,24,34,12,ES_AUTOHSCROLL
+    LISTBOX         IDC_WTMK_FONT_SIZE,191,37,35,51,LBS_HASSTRINGS | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL
+    PUSHBUTTON      "OK",IDOK,107,110,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,178,110,50,14
+END
+
+IDD_WATERMARK DIALOGEX 0, 0, 255, 240
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "ウォーターマーク"
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_WTMK_LB,15,10,110,148,LBS_HASSTRINGS | 
+                    LBS_DISABLENOSCROLL | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    PUSHBUTTON      "新規(&N)...",IDC_WTMK_ADD_BT,15,163,50,14,WS_GROUP
+    PUSHBUTTON      "削除(&R)",IDC_WTMK_DEL_BT,75,163,50,14
+    PUSHBUTTON      "編集(&E)...",IDC_WTMK_EDIT_BT,135,163,50,14
+    CONTROL         "",IDC_WTMK_PREVIEW,"Button",BS_OWNERDRAW | WS_DISABLED,
+                    148,10,90,147,WS_EX_STATICEDGE
+    CONTROL         "最初のページのみ付加(&O)",IDC_WTMK_FIRST,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,15,189,90,10
+    CONTROL         "バックグラウンド(&B)",IDC_WTMK_OVERP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,201,90,10
+    PUSHBUTTON      "OK",IDOK,135,220,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,195,220,50,14
+END
+
+IDD_VERSIONDISP DIALOG DISCARDABLE  0, 0, 200, 225
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "バージョン情報"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "",IDC_VER_LOGO,5,5,186,190,WS_GROUP
+    PUSHBUTTON      "OK",IDOK,70,205,60,14
+    CONTROL         "",IDC_VER_OKI_LOGO_BT,"Button",BS_OWNERDRAW | 
+                    WS_DISABLED,23,12,130,90
+    LTEXT           "ドライバーバージョン",IDC_VER_V_TEXT,39,145,62,9,NOT WS_GROUP
+    LTEXT           "PPD バージョン",IDC_VER_PPDV_TEXT,39,160,48,9,NOT WS_GROUP
+    CTEXT           "aaaa",IDC_VER_MODEL_TEXT,12,125,173,9,NOT WS_GROUP
+    LTEXT           "aaaa",IDC_VER_VER_TEXT,101,145,66,9,NOT WS_GROUP
+    LTEXT           "aaaa",IDC_VER_PPDVER_TEXT,101,160,74,9,NOT WS_GROUP
+    CTEXT           "aaaa",IDC_VER_COPY_TEXT,12,175,173,9,NOT WS_GROUP
+END
+
+IDD_TAB_COLOR DIALOG DISCARDABLE  0, 0, 291, 293
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "カラー"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "印刷モード(&M)",IDC_COLOR_GR,18,6,263,205
+    CONTROL         "推奨",IDC_COLOR_AUTO,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,92,24,38,10
+    CONTROL         "オフィスカラー",IDC_COLOR_OFFICE,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,92,64,57,10
+    CONTROL         "グラフィックプロ",IDC_COLOR_GRA,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,92,104,59,10
+    CONTROL         "カラーマッチングオフ",IDC_COLOR_MOFF,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,92,144,80,10
+    CONTROL         "モノクロ",IDC_COLOR_GRAY,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,92,184,65,10
+    CONTROL         "",IDC_COLBMP_AUTO_BT,"Button",BS_OWNERDRAW | WS_GROUP,
+                    56,17,27,24
+    CONTROL         "",IDC_COLBMP_OFFICE_BT,"Button",BS_OWNERDRAW | WS_GROUP,
+                    56,57,27,24
+    CONTROL         "",IDC_COLBMP_GRA_BT,"Button",BS_OWNERDRAW | WS_GROUP,56,
+                    97,27,24
+    CONTROL         "",IDC_COLBMP_MOFF_BT,"Button",BS_OWNERDRAW | WS_GROUP,
+                    56,137,27,24
+    CONTROL         "",IDC_COLBMP_GRAY_BT,"Button",BS_OWNERDRAW | WS_GROUP,
+                    56,177,27,24
+    PUSHBUTTON      "詳細(&L)...",IDC_COLADV_GRA_BT,163,100,60,14
+    PUSHBUTTON      "詳細(&E)...",IDC_COLADV_OFFICE_BT,163,60,60,14
+    LTEXT           "トナーセーブ(&T) :",IDC_TONERSAVE_TXT,18,217,66,10,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_TONERSAVE_CB,18,229,100,95,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "100%の黒はトナーセーブしない(&B)",IDC_TONERSAVE_BLACK_CH,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,18,245,120,11
+    CONTROL         "ハーフトーン調整(&C):",IDC_COL_HTONE_CH,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,163,217,100,12
+    COMBOBOX        IDC_COL_HTONE_CB,163,229,102,95,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "その他(&V)...",IDC_SUBDIALOG_BT,210,252,70,14,WS_GROUP
+    PUSHBUTTON      "色見本の印刷(&P)...",IDC_COL_SMPPR_BT,135,274,70,14
+    PUSHBUTTON      "標準(&D)",IDC_DEFAULT_BT,210,274,70,14
+    CONTROL         "",IDC_OKILOGO_BMP_BT,"Button",BS_OWNERDRAW | 
+                    WS_DISABLED,10,258,50,40
+END
+
+IDD_OPT_COLOR_O DIALOG DISCARDABLE  0, 0, 295, 225
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "オフィスカラー詳細設定"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    GROUPBOX        "RGBカラー設定",IDC_CMMSETTING_GR,10,5,132,120,WS_GROUP
+    LTEXT           "カラー調整(&R):",IDC_COLORSETTING_GR,19,18,54,14,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_RENDERSTYLE_CB,19,31,120,140,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_COLORBMP_BT,"Button",BS_OWNERDRAW | WS_DISABLED,
+                    155,14,111,105
+    CONTROL         "ユーザーメニュー(&U):",IDC_ASICUTIL_CH,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,18,70,72,10
+    COMBOBOX        IDC_ASICUTIL_CB,18,89,120,65,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "CMYKシミュレーション(&S)",IDC_RENDERSTYLE_GR,10,130,132,70,
+                    WS_GROUP
+    COMBOBOX        IDC_INKSIM_CB,19,145,102,92,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "黒の生成(&B)",IDC_BLACKEGEN_GR,147,130,132,70,WS_GROUP
+    CONTROL         "自動",IDC_BLKGEN_AUTO_RB,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,158,145,59,10
+    CONTROL         "CMYKトナーで生成",IDC_BLKGEN_CMYK_RB,"Button",
+                    BS_AUTORADIOBUTTON,158,162,71,10
+    CONTROL         "黒（k）トナーのみで生成",IDC_BLKGEN_KONLY_RB,"Button",
+                    BS_AUTORADIOBUTTON,158,179,95,10
+    PUSHBUTTON      "OK",IDOK,135,206,43,12,WS_GROUP
+    PUSHBUTTON      "キャンセル",IDCANCEL,187,206,43,12
+    PUSHBUTTON      "標準(&D)",IDC_DEFAULT_BT,236,206,43,12
+END
+
+IDD_OPT_COLOR_G DIALOG DISCARDABLE  0, 0, 311, 295
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "グラフィックプロ詳細設定"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    CONTROL         "ICCプロファイルカラーマッチング",IDC_COLG_ICC_RB,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,20,7,126,10
+    CONTROL         "印刷シミュレーション",IDC_COLG_SIM_RB,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,20,25,126,10
+    CONTROL         "プロファイルの生成（測色用）",IDC_COLG_PRO_RB,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,20,43,126,10
+    CONTROL         "AP側でカラーマッチング",IDC_COLG_API_RB,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,20,61,126,10
+    CONTROL         "",-1,"Static",SS_ETCHEDHORZ | WS_GROUP,7,79,290,1
+    GROUPBOX        "入力",IDC_COLG_INPUT_GR,17,86,124,135
+    LTEXT           "RGB プロファイル(&R):",IDC_COLG_RGB_TXT,24,96,100,10
+    COMBOBOX        IDC_COLG_RGB_CB,23,106,110,70,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "CMYK入力プロファイル(&C):",IDC_COLG_CMYK_RB,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,24,147,100,10
+    CONTROL         "CMYKリンクプロファイル(&L):",IDC_COLG_CMYKL_RB,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,24,190,100,10
+    COMBOBOX        IDC_COLG_CMYK_CB,23,160,110,68,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    COMBOBOX        IDC_COLG_CMYKL_CB,23,204,110,68,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "シミュレーション対象プロファイル(&S):",
+                    IDC_COLG_SIMT_TXT,24,147,110,10
+    COMBOBOX        IDC_COLG_SIMT_CB,23,161,110,70,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    CONTROL         "墨版の保存(&K)",IDC_COLG_PREB_CH,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,29,177,59,10
+    GROUPBOX        "出力",IDC_COLG_OUTPUT_GR,178,88,111,91
+    LTEXT           "プリンタープロファイル(&O):",IDC_COLG_PROF_TXT,181,97,100,
+                    10
+    COMBOBOX        IDC_COLG_PROF_CB,182,110,100,70,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "カラーの表現(&I):",IDC_COLG_INTENT_TXT,181,150,100,10
+    COMBOBOX        IDC_COLG_INTENT_CB,182,161,100,68,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "マッチング精度(&M)",IDC_COLG_MAT_GR,17,227,124,42
+    CONTROL         "Slider1",IDC_COLG_MAT_SLD,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,33,240,85,13
+    CTEXT           "高精度",IDC_COLG_CMATF_TXT,98,257,32,10
+    CTEXT           "速い",IDC_COLG_CMATH_TXT,22,257,32,10
+    LTEXT           "黒の生成(&B):",IDC_COLG_BKF_TXT,157,219,100,10
+    COMBOBOX        IDC_COLG_BKF_CB,157,230,100,70,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_COLG_ARR1_BT,"Button",BS_OWNERDRAW | WS_DISABLED,
+                    148,101,25,25
+    CONTROL         "",IDC_COLG_ARR2_BT,"Button",BS_OWNERDRAW | WS_DISABLED,
+                    148,149,25,25
+    CONTROL         "",IDC_COLG_ARR3_BT,"Button",BS_OWNERDRAW | WS_DISABLED,
+                    101,122,25,25
+    CONTROL         "",IDC_COLG_ARR4_BT,"Button",BS_OWNERDRAW | WS_DISABLED,
+                    148,189,142,22
+    CONTROL         "テキストとグラフィックスに純ブラックを使用(&T)",
+                    IDC_COLG_PURB_CH,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,157,253,146,10
+    PUSHBUTTON      "OK",IDOK,158,275,43,12,WS_GROUP
+    PUSHBUTTON      "キャンセル",IDCANCEL,210,275,43,12
+    PUSHBUTTON      "標準(&D)",IDC_DEFAULT_BT,261,275,43,12
+END
+
+IDD_TAB_SECURE DIALOG DISCARDABLE  0, 0, 291, 293
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Job Security"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "&Enable security",IDC_ENABLESECURITY_CH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,10,61,10
+    GROUPBOX        "Crypto",IDC_CIPHER_GR,10,29,271,73
+    LTEXT           "Cipher &algorithm",IDC_CIPHERALGO_TXT,21,45,72,12,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_CIPHERALGO_CB,110,44,160,54,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Password :",IDC_CIPHERPASSWD_TXT,21,71,73,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_CIPHERPASSWD_EB,110,71,160,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    GROUPBOX        "Erase print data",1706,10,121,271,87
+    LTEXT           "Keeping &time",1707,21,137,73,14,SS_CENTERIMAGE
+    EDITTEXT        3608,110,137,160,14,ES_AUTOHSCROLL
+    LTEXT           "Erase &method :",1712,21,163,73,14,SS_CENTERIMAGE
+    CONTROL         "Slider1",1713,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,110,163,160,15
+    LTEXT           "Fast",1714,111,184,14,8
+    LTEXT           "Safe",1715,257,184,14,8
+END
+
+IDD_TAB_SECURE1 DIALOG DISCARDABLE  0, 0, 291, 293
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ジョブセキュリティ"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    CONTROL         "セキュリティ機能を有効にする(&E)",IDC_ENABLESECURITY_CH,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,10,111,10
+    GROUPBOX        "暗号化",IDC_CIPHER_GR,10,29,271,73
+    LTEXT           "暗号化アルゴリズム(&A)：",IDC_CIPHERALGO_TXT,21,45,72,
+                    12,SS_CENTERIMAGE
+    COMBOBOX        IDC_CIPHERALGO_CB,110,44,160,54,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "パスワード(&P)：",IDC_CIPHERPASSWD_TXT,21,71,73,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_CIPHERPASSWD_EB,110,71,160,14,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    GROUPBOX        "データの消去",1706,10,121,271,87
+    LTEXT           "データの保存期間(&T)",1707,21,137,73,14,SS_CENTERIMAGE
+    EDITTEXT        3608,110,137,160,14,ES_AUTOHSCROLL
+    LTEXT           "データの消去方法(&M)",1712,21,163,73,14,SS_CENTERIMAGE
+    CONTROL         "Slider1",1713,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,110,163,160,15
+    LTEXT           "速い",1714,111,184,14,8
+    LTEXT           "安全",1715,257,184,15,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ALLERT_STAPLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 269
+        TOPMARGIN, 5
+    END
+
+    IDD_ALLERT_JOBTYPE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 225
+        TOPMARGIN, 5
+    END
+
+    IDD_OVERLAY, DIALOG
+    BEGIN
+        LEFTMARGIN, 15
+        RIGHTMARGIN, 272
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 225
+    END
+
+    IDD_OPT_COLORSETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 163
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 116
+    END
+
+    IDD_TAB_JOBOPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 281
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 232
+    END
+
+    IDD_OPT_JOBTYPE, DIALOG
+    BEGIN
+        VERTGUIDE, 60
+    END
+
+    IDD_OPT_ADVANCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 144
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+
+    IDD_WATERMARK, DIALOG
+    BEGIN
+        RIGHTMARGIN, 252
+    END
+
+    IDD_TAB_COLOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 18
+        RIGHTMARGIN, 281
+        BOTTOMMARGIN, 288
+    END
+
+    IDD_OPT_COLOR_O, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 288
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 218
+    END
+
+    IDD_OPT_COLOR_G, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 304
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 287
+    END
+    
+    IDD_TAB_SECURE, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 281
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 288
+    END
+
+    IDD_TAB_SECURE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 281
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 288
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MIRROR_ICON         ICON    DISCARDABLE     "..\\bmp\\mirror_i.ico"
+IDI_NORMAL_ICON         ICON    DISCARDABLE     "..\\bmp\\normal_i.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SECTION             "OEM UI Added Item"
+    IDS_CALIBRATED          "Printer has been calibrated."
+    IDS_NAME                "OEM UI Customization DLL"
+    IDS_TEMP_NAME           "Temporary"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_JT_ERR_NOPASS       "パスワードを入力してください。"
+    IDS_JT_ERR_JOBNAME      "ジョブ名を入力してください。"
+    IDS_OVLAY_LIST_TITLE1   "オーバーレイ"
+    IDS_OVLAY_LIST_TITLE2   "ページ"
+    IDS_DISPLAY_MAX         "(最大登録数 %d)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_MEMORYALLOC     "メモリー容量が不足しています。"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EDTFORM_ALLPAGE     "すべてのページ"
+    IDS_EDTFORM_FIRSTPAGE   "最初のページのみ"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EDTFORM_ODDPAGE     "奇数ページ"
+    IDS_EDTFORM_EVENPAGE    "偶数ページ"
+    IDS_EDTFORM_CUSTOMPAGE  "ユーザーページ設定"
+    IDS_OVERLAY_DEFAULTNAME "新しいオーバーレイ"
+    IDS_DEVICE_AUTOCONFIG   "プリンターの情報を取得する"
+    IDS_DEVICE_HDDSPOOL     "ジョブをハードディスクにスプールする"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_OL_SAMEFORMGP   "同一名称のオーバーレイが既に存在しています\n名称を変更してください。"
+    IDS_ERR_OL_NOFORM       "フォームが登録されていません。"
+	IDS_ERR_OL_FORMNAME       "一番最後の文字の入力には、ドットを使用しないでください。"
+	IDS_ERR_OL_NONAME       "オーバーレイ名を入力してください。"
+    IDS_WARNIG_OVERLAYCRT   "フォームの作成が選択されると、PostScript出力オプションが\n自動的にEPSの作成に設定されます。フォームの作成を解除する際には、\nPostScript出力オプションも合わせて変更してください。"
+    IDS_ERR_DEV_NODEVINFO   "インストール可能なオプションを自動で取得できませんでした。\nプリンターの電源がはいっているか確かめてください。"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_INVALID_VAL     "いくつかの設定が無効です。"
+    IDS_ERR_INVALID_FIN     "ホチキス止めやパンチを有効とするには、排出先を”フィニッシャー（フェイスダウン）”にする必要があります。\n排出先の設定を”フィニッシャー（フェイスダウン）にする場合は”OK”ボタンを、以前の設定に戻す場合は”キャンセル”ボタンを押下してください。"
+    IDS_ERR_INVALID_STAPLE  "排出先を”フィニッシャー（フェイスダウン）”以外に設定する場合は、ホチキス止めやパンチの設定を”なし”にする必要があります。\nホチキス止めやパンチの設定を”なし”にする場合は”OK”ボタンを、以前の設定に戻す場合は”キャンセル”ボタンを押下してください。"
+    IDS_ERR_INVALID_BIND    "新しい綴じ位置の設定を有効にするには、パンチの設定を”なし”にする必要があります。\nパンチの設定を”なし”にする場合は”OK”ボタンを、以前の設定に戻す場合は”キャンセル”ボタンを押下してください。"
+    IDS_ERR_INVALID_SECURE  "この印刷形式では、部数を１にしてプリンターに保存します。\nプリンターの操作パネルで印刷開始を指示する際に、部数を指定してください。"
+    IDS_ERR_INVALID_FITTO	"「用紙サイズを変換する」時は、拡大･縮小印刷を指定できません。"
+    IDS_ERR_SWATCH          "この操作には色見本印刷ユーティリティが必要です。色見本印刷ユーティリティをインストールしてから実行してください。"
+    IDS_ERR_ERROR           "エラー"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_WTMARK_NONE         "なし"
+    IDS_WTMARK_SECTION      "Watermark"
+    IDS_WTMARK_FONT         "HeiseiMin-W3-90ms-RKSJ-H"
+    IDS_WTMARK_COLOR        "Custom Color"
+    IDS_WATERMK_UPPERLEFT   "左上"
+    IDS_WATERMK_TOP         "中央上"
+    IDS_WATERMK_UPPERRIGHT  "右上"
+    IDS_WATERMK_CENTER2     "中央"
+    IDS_WATERMK_BOTTOMLEFT  "左下"
+    IDS_WATERMK_BOTTOM      "中央下"
+    IDS_WATERMK_BOTTOMRIGHT "右下"
+    IDS_WTMARK_FONT_8       "8"
+    IDS_WTMARK_FONT_9       "9"
+    IDS_WTMARK_FONT_10      "10"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_INPUTRD_TITLE       "入力プロファイルの選択"
+    IDS_OUTPUTRD_TITLE      "出力プロファイルの選択"
+    IDS_DATASAVE_TITLE      "CRDデータファイルの保存"
+    IDS_DATASAVE_SUCCESS    "CRDデータファイルの作成が完了しました。"
+    IDS_DATASAVE_FAULT      "CRDデータファイルの作成を失敗しました。"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ICCREAD_DATANONE    "[なし]"
+    IDS_ICCREAD_DEFAULTNAME "カラーデータ%d"
+    IDS_ICCREAD_DATAINFO    "カラープロファイル (*.icm;*.icc)"
+    IDS_ICCREAD_WARNIG1     "[ICCプロファイルの設定]が登録されていません。\r\n新規に登録するか、印刷モードを変更してください。\r\nICCプロファイルの設定の登録、編集、削除は「プリンターの印刷設定」画面からのみ行えます。"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_RENDSTL_ASC_AUTO    "自動"
+    IDS_RENDSTL_ASC_PERCEP  "コントラスト重視"
+    IDS_RENDSTL_ASC_VIVID   "鮮やかさ重視"
+    IDS_RENDSTL_ASC_DCAME   "デジタルカメラモード"
+    IDS_RENDSTL_ASC_HIGHBRI "sRGB"
+    IDS_RENDSTL_CRD_AUTO    "自動"
+    IDS_RENDSTL_CRD_PERCEP  "コントラスト重視"
+    IDS_RENDSTL_CRD_VIVID   "鮮やかさ重視"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_RENDSTL_CRD_DCAME   "カラーメトリック"
+    IDS_RENDSTL_CRD_HIGHBRI "絶対色彩"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HIDEPAPER_BEGIN     "#10 Envelope"
+    IDS_HIDEPAPER_1         "12×18"""
+    IDS_HIDEPAPER_2         "Legal"
+    IDS_HIDEPAPER_3         "Letter"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HIDEPAPER_4         "Executive"
+    IDS_HIDEPAPER_5         "Tabloid"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ICCREAD_FILTER1     "カラープロファイル (*.icm;*.icc)"
+    IDS_ICCREAD_FILTER2     "全てのファイル (*.*)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_UMPLUGIN_NAME       "Ok741m_3.dll"
+    IDS_MSGBOXTITLE_INFO    "情報"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_WTMARK_FONT_11      "11"
+    IDS_WTMARK_FONT_12      "12"
+    IDS_WTMARK_FONT_14      "14"
+    IDS_WTMARK_FONT_16      "16"
+    IDS_WTMARK_FONT_18      "18"
+    IDS_WTMARK_FONT_20      "20"
+    IDS_WTMARK_FONT_22      "22"
+    IDS_WTMARK_FONT_24      "24"
+    IDS_WTMARK_FONT_26      "26"
+    IDS_WTMARK_FONT_28      "28"
+    IDS_WTMARK_FONT_36      "36"
+    IDS_WTMARK_FONT_48      "48"
+    IDS_WTMARK_FONT_72      "72"
+    IDS_WTMARK_FONT_STD     "標準"
+    IDS_WTMARK_FONT_ITARIC  "斜体"
+    IDS_WTMARK_FONT_BOLD    "太字"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_WTMARK_FONT_BOLDITARIC "太字 斜体"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR_WM_MAXWM        "登録数が１６個の制限を越えています。登録済みのウォーターマークを削除後、追加してください。"
+    IDS_ERR_WM_WARNING      "警告"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_JOPT_COPIESRNG      "( %d-%d )"
+    IDS_JOPT_SCALERNG       "( %d-%d %% )"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_VER_MODELNAME       "%s プリンタードライバー"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_COMPRESS_NONE       "しない"
+    IDS_COMPRESS_FAST       "速度重視"
+    IDS_COMPRESS_DEFAULT    "バランス重視"
+    IDS_COMPRESS_BESTCOMP   "圧縮率重視"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CIPHERALGO_NUM      "3"
+    901                     "Triple DES"
+    902                     "AES (鍵128-bit)"
+    903                     "AES (鍵256-bit)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ERR60               "10～20文字のパスワードを入力してください。\n（使用できる文字：1～9, a～z）"
+    IDS_ERR61               "パスワードで使用できない文字が使用されています。\n（使用できる文字：1～9, a～z）"
+    IDS_ERR62               "保存期間で設定できる時間は""00:01～23:59""です"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_JOPT_ICSECURE       "ICカード認証印刷"
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英語 (ｱﾒﾘｶ) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ALLERT_ICON         ICON    DISCARDABLE     "W95MBX03.ICO"
+IDI_NEGATIVE_ICON       ICON                    "..\\bmp\\negative.ico"
+IDI_MIRRNEGT_ICON       ICON                    "..\\bmp\\mirrnegt.ico"
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "#include ""rc_str.h""\r\n"
+    "#include ""rc_dlg.h""\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 英語 (ｱﾒﾘｶ) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
